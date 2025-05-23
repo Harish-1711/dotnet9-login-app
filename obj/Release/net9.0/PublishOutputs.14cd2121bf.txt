@@ -1,0 +1,8 @@
+C:\Users\Harish\OneDrive - futurecalls.com\Desktop\LoginApp\publish\LoginApp.exe
+C:\Users\Harish\OneDrive - futurecalls.com\Desktop\LoginApp\publish\appsettings.Development.json
+C:\Users\Harish\OneDrive - futurecalls.com\Desktop\LoginApp\publish\appsettings.json
+C:\Users\Harish\OneDrive - futurecalls.com\Desktop\LoginApp\publish\LoginApp.dll
+C:\Users\Harish\OneDrive - futurecalls.com\Desktop\LoginApp\publish\LoginApp.deps.json
+C:\Users\Harish\OneDrive - futurecalls.com\Desktop\LoginApp\publish\LoginApp.runtimeconfig.json
+C:\Users\Harish\OneDrive - futurecalls.com\Desktop\LoginApp\publish\LoginApp.pdb
+C:\Users\Harish\OneDrive - futurecalls.com\Desktop\LoginApp\publish\BCrypt.Net-Next.dll
