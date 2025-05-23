@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fJ7gT/RAIS8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Harish\\OneDrive - futurecalls.com\\Desktop\\LoginApp\\LoginApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Harish\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

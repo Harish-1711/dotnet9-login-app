@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @ViewBag.Username!</h1>
+    <p>You have successfully logged in.</p>
+    
+    <form asp-controller="Account" asp-action="Logout" method="post" class="mt-3">
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+</div>

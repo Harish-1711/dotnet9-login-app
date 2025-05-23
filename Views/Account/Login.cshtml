@@ -1,0 +1,170 @@
+@model LoginApp.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="login-container">
+    <div class="login-card">
+        <div class="text-center mb-4">
+            <h2 class="login-title">Welcome</h2>
+        </div>
+        
+        <form asp-action="Login" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="Username" class="form-label">Username</label>
+                <input asp-for="Username" class="form-control login-input" placeholder="Enter your username" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-4">
+                <label asp-for="Password" class="form-label">Password</label>
+                <input asp-for="Password" class="form-control login-input" placeholder="Enter your password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            
+            <div class="d-grid gap-2 mb-3">
+                <button type="submit" class="btn btn-primary login-btn">Sign In</button>
+            </div>
+            
+            <div class="text-center mb-3">
+                <span class="or-text">or</span>
+            </div>
+            
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-dark microsoft-btn" onclick="signInWithMicrosoft()">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+                        <rect x="1" y="1" width="6.5" height="6.5" fill="#F25022"/>
+                        <rect x="8.5" y="1" width="6.5" height="6.5" fill="#7FBA00"/>
+                        <rect x="1" y="8.5" width="6.5" height="6.5" fill="#00A4EF"/>
+                        <rect x="8.5" y="8.5" width="6.5" height="6.5" fill="#FFB900"/>
+                    </svg>
+                    Sign in with Microsoft 365
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f5f5f5;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .login-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .login-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .login-title {
+        color: #333;
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    .form-label {
+        color: #666;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .login-input {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 12px 16px;
+        font-size: 14px;
+        transition: border-color 0.2s;
+    }
+
+    .login-input:focus {
+        border-color: #0078d4;
+        box-shadow: 0 0 0 0.2rem rgba(0, 120, 212, 0.25);
+    }
+
+    .login-btn {
+        background-color: #0078d4;
+        border: none;
+        border-radius: 4px;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.2s;
+    }
+
+    .login-btn:hover {
+        background-color: #106ebe;
+    }
+
+    .or-text {
+        color: #666;
+        font-size: 14px;
+        position: relative;
+    }
+
+    .or-text::before,
+    .or-text::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 45%;
+        height: 1px;
+        background-color: #ddd;
+    }
+
+    .or-text::before {
+        left: -55%;
+    }
+
+    .or-text::after {
+        right: -55%;
+    }
+
+    .microsoft-btn {
+        background-color: #2f2f2f;
+        border: none;
+        border-radius: 4px;
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: background-color 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .microsoft-btn:hover {
+        background-color: #1a1a1a;
+    }
+
+    .text-danger {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+</style>
+
+<script>
+    function signInWithMicrosoft() {
+        alert('Microsoft 365 sign-in functionality would be implemented here');
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
